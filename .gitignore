@@ -1,0 +1,13 @@
+.DS_Store
+.env
+.venv/
+__pycache__/
+*.pyc
+
+# Data outputs
+data/raw/
+data/processed/
+data/boundaries/
+
+# Node modules (if added later)
+node_modules/
