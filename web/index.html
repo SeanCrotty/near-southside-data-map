@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>DFW Demographics + LODES Explorer</title>
+    <link
+      href="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="panel">
+        <h1>DFW Demographics + LODES</h1>
+        <div class="control">
+          <label for="viewMode">View</label>
+          <select id="viewMode">
+            <option value="acs">ACS Demographics</option>
+            <option value="lodes">LODES Dominant Sector</option>
+            <option value="dots">LODES Dot Density</option>
+          </select>
+        </div>
+        <div class="control">
+          <label for="yearSlider">ACS Year</label>
+          <input id="yearSlider" type="range" min="0" max="0" value="0" />
+          <div class="hint" id="yearLabel">Year</div>
+        </div>
+        <div class="control">
+          <label for="acsField">ACS Variable</label>
+          <select id="acsField"></select>
+        </div>
+        <div class="control">
+          <label for="redevSelect">Redevelopment Org</label>
+          <select id="redevSelect"></select>
+        </div>
+        <div class="control">
+          <label>Selection</label>
+          <div class="hint" id="selectionLabel">All tracts</div>
+        </div>
+        <div class="control">
+          <button id="downloadAcs">Download ACS CSV</button>
+          <button id="downloadLodes">Download LODES CSV</button>
+        </div>
+        <p class="note">
+          Data: ACS 5-year (2020+), LODES RAC 2023. Redevelopment org boundaries
+          are selectable.
+        </p>
+      </aside>
+      <main class="map-wrap">
+        <div id="map"></div>
+        <div class="legend" id="legend"></div>
+      </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://unpkg.com/maplibre-gl@3.6.1/dist/maplibre-gl.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

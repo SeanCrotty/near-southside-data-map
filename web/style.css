@@ -1,0 +1,112 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+  color: #1f2933;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  height: 100%;
+}
+
+.panel {
+  padding: 20px;
+  border-right: 1px solid #e0e6ed;
+  background: #f7f9fb;
+  overflow-y: auto;
+}
+
+.panel h1 {
+  margin: 0 0 16px;
+  font-size: 18px;
+}
+
+.control {
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.control label {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.control select,
+.control input,
+.control button {
+  padding: 8px 10px;
+  font-size: 13px;
+  border-radius: 6px;
+  border: 1px solid #cbd2d9;
+}
+
+.control button {
+  cursor: pointer;
+  background: #1f6feb;
+  border-color: #1f6feb;
+  color: #fff;
+}
+
+.control button + button {
+  margin-top: 8px;
+  background: #4b5563;
+  border-color: #4b5563;
+}
+
+.hint {
+  font-size: 12px;
+  color: #52606d;
+}
+
+.note {
+  margin-top: 18px;
+  font-size: 12px;
+  color: #52606d;
+  line-height: 1.4;
+}
+
+.map-wrap {
+  position: relative;
+}
+
+#map {
+  position: absolute;
+  inset: 0;
+}
+
+.legend {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  max-width: 220px;
+}
+
+.legend h3 {
+  margin: 0 0 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.legend-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.legend-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  border: 1px solid #cbd2d9;
+}
